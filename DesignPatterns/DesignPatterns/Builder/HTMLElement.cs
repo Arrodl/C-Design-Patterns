@@ -31,7 +31,10 @@ namespace DesignPatterns.Builder {
                 sb.Append(new string(' ', _identationSize * (_indent + 1)));
                 sb.AppendLine(_text);
             }
-
+            foreach (var e in _elements) {
+                sb.Append(e.ToStringImpl(_indent + 1));
+            }
+            sb.AppendLine($"{i}<{_name}>");
             return sb.ToString();
         }
 
