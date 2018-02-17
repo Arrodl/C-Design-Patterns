@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
+using DesignPatterns.SOLID.SingleResponsability;
 using static System.Console;
 
 namespace DesignPatterns {
@@ -16,6 +18,15 @@ namespace DesignPatterns {
             WriteLine(htmlBuilder.ToString());
 
             ReadKey();
+
+            var j = new Journal();
+            j.AddEntry("I cried today");
+
+            var persistance = new Persistence();
+            var filename = @"c:\temp\journal.txt";
+            persistance.SaveToFile(j, filename, true);
+
+            Process.Start(filename);
         }
     }
 }
