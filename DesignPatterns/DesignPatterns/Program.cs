@@ -5,6 +5,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using DesignPatterns.SOLID.SingleResponsability;
+using DesignPatterns.SOLID.LiskovSubstitution;
 using static System.Console;
 using DesignPatterns.SOLID.OpenClosed;
 
@@ -55,6 +56,19 @@ namespace DesignPatterns {
                     new SizeSpecification(Size.Large)))) {
                 WriteLine($" - {p._name} is Green and Large");
             }
+
+            var rect = new Rectangle(12,12);
+
+            // Liskov
+
+            Rectangle rc = new Rectangle(2, 3);
+            WriteLine($"{rc} has area {Area(rc)}");
+
+            Rectangle sq = new Square();
+            sq._width = 4;
+            WriteLine($"{sq} has area {Area(sq)}");
         } 
+
+        static public int Area(Rectangle r) => r._width * r._height;
     }
 }
