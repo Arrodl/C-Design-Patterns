@@ -34,6 +34,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,12 +47,36 @@
   <ItemGroup>
     <Compile Include="Builder\HTMLBuilder.cs" />
     <Compile Include="Builder\HTMLElement.cs" />
-    <Compile Include="Builder\Person.cs" />
+    <Compile Include="Observer\FallsIllEventArgs.cs" />
+    <Compile Include="Observer\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOLID\DependencyInversion\IRelationshipBrowser.cs" />
+    <Compile Include="SOLID\DependencyInversion\Person.cs" />
+    <Compile Include="SOLID\DependencyInversion\Relationships.cs" />
+    <Compile Include="SOLID\InterfaceSegregation\Document.cs" />
+    <Compile Include="SOLID\InterfaceSegregation\IMachine.cs" />
+    <Compile Include="SOLID\InterfaceSegregation\IMultiFunctionDevice.cs" />
+    <Compile Include="SOLID\InterfaceSegregation\IPrinter.cs" />
+    <Compile Include="SOLID\InterfaceSegregation\IScanner.cs" />
+    <Compile Include="SOLID\InterfaceSegregation\MultiFunctionPrinter.cs" />
+    <Compile Include="SOLID\InterfaceSegregation\Printer.cs" />
+    <Compile Include="SOLID\LiskovSubstitution\Rectangle.cs" />
+    <Compile Include="SOLID\LiskovSubstitution\Square.cs" />
+    <Compile Include="SOLID\OpenClosed\AndSpecification.cs" />
+    <Compile Include="SOLID\OpenClosed\BetterFilter.cs" />
+    <Compile Include="SOLID\OpenClosed\ColorSpecification.cs" />
+    <Compile Include="SOLID\OpenClosed\IFilter.cs" />
+    <Compile Include="SOLID\OpenClosed\ISpecification.cs" />
+    <Compile Include="SOLID\OpenClosed\Product.cs" />
+    <Compile Include="SOLID\OpenClosed\ProductFilter.cs" />
+    <Compile Include="SOLID\OpenClosed\SizeSpecification.cs" />
+    <Compile Include="SOLID\SingleResponsability\Journal.cs" />
+    <Compile Include="SOLID\SingleResponsability\Persistence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

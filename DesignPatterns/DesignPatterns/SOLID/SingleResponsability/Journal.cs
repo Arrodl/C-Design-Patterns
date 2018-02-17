@@ -5,8 +5,9 @@ using static System.Console;
 
 namespace DesignPatterns.SOLID.SingleResponsability {
     public class Journal {
-        private readonly List<string> entries;
-        private static int counter;
+        private readonly List<string> entries
+            = new List<string>();
+        private static int counter = 0;
         /// <sumary>
         /// Add entries to Journal
         /// </sumary>
